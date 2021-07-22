@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const paymentModel = require('../models/payments.model');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
