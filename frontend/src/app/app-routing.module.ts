@@ -5,27 +5,28 @@ import { LoginComponent } from './auth/login/login.component';
 import { LogoutComponent } from './auth/logout/logout.component';
 import { NewUserComponent } from './auth/new-user/new-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'register',
-    component: NewUserComponent
+    component: NewUserComponent,
   },
   {
     path: 'forgot-password',
-    component: ForgotComponent
+    component: ForgotComponent,
   },
   {
     path: 'logout',
-    component: LogoutComponent
+    component: LogoutComponent,
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
     path: 'customers',
@@ -52,7 +53,21 @@ const routes: Routes = [
     loadChildren: () =>
       import('./settings/settings.module').then((m) => m.SettingsModule),
   },
-  { path: 'loan-types', loadChildren: () => import('./loan-types/loan-types.module').then(m => m.LoanTypesModule) },
+  {
+    path: 'loan-types',
+    loadChildren: () =>
+      import('./loan-types/loan-types.module').then((m) => m.LoanTypesModule),
+  },
+  {
+    path: 'reports',
+    loadChildren: () =>
+      import('./reports/reports.module').then((m) => m.ReportsModule),
+  },
+  { path: 'activity', loadChildren: () => import('./audit-log/audit-log.module').then(m => m.AuditLogModule) },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  },
 ];
 
 @NgModule({

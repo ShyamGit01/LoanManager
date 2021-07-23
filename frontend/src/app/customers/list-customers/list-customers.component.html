@@ -1,0 +1,44 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+
+<h2>Customers</h2>
+<button class="btn btn-primary" [routerLink]="'add'">Add New Customers</button>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Customer Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1051205651</td>
+          <td>Mark</td>
+          <td>Tompson</td>
+          <td>9658993041</td>
+          <td>Mark@gmail.com</td>
+          <td>USA</td>
+          <td>
+            <a [routerLink]="'edit/'"><i class="icon-pencil"></i></a>
+            <a [routerLink]="'delete/'" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+        </td>
+        </tr>
+
+      </tbody>
+    </table>
+</div>
+<div class="pagination">
+    <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</div>

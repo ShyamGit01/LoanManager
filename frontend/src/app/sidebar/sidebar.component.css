@@ -75,3 +75,8 @@ i.far.fa-credit-card:hover {
 .sidebar ul li a:hover {
     text-decoration: none
 }
+
+.active{
+    color: black;
+    text-decoration: underline;    
+}

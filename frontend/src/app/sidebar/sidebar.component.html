@@ -11,16 +11,16 @@
 <div class="wrapper d-flex" style="padding-top: 50px;">
     <div class="sidebar">
         <ul>
-            <li><a href="dashboards"><i class="bi bi-house-door"></i>Dashboard</a></li>
-            <li><a href="loans"><i class="far fa-credit-card"></i>Loans</a></li>
-            <li><a href="customers"><i class="fas fa-file-invoice"></i>Customers</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'dashboard'"><i class="bi bi-house-door"></i>Dashboard</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'loans'"><i class="far fa-credit-card"></i>Loans</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'customers'"><i class="fas fa-file-invoice"></i>Customers</a></li>
         
-            <li><a href="payments"><i class="far fa-calendar-alt"></i>Payments</a></li>
-            <li><a href="invoices"><i class="fas fa-video"></i>Invoices</a></li>
-            <li><a href="loan-types"><i class="fas fa-id-badge"></i>Loan Plans</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'payments'"><i class="far fa-calendar-alt"></i>Payments</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'invoices'"><i class="fas fa-video"></i>Invoices</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'loan-types'"><i class="fas fa-id-badge"></i>Loan Plans</a></li>
         
-            <li><a href="#"><i class="fas fa-external-link-alt"></i>Reports</a></li>
-            <li><a href="settings"><i class="fas fa-code"></i>Settings</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'reports'"><i class="fas fa-external-link-alt"></i>Reports</a></li>
+            <li><a routerLinkActive="active" [routerLink]="'settings'"><i class="fas fa-code"></i>Settings</a></li>
         </ul>
     </div>
 </div>
