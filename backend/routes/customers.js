@@ -8,12 +8,12 @@ const customerModel = require("../models/customers.model");
 router.get("/", async (req, res, next) => {
   try{
     const customers = await customerModel.find();
-    res.send(customers);
-    // res.status(200).json({
-    //     status : 0,
-    //     message : "Data Fetch Successfully",
-    //     data : listing
-    // })
+    // res.send(customers);
+    res.status(200).json({
+        status : 0,
+        message : "Data Fetch Successfully",
+        results : customers
+    })
 } catch(error){
     res.status(400).json({
         status : 1,
@@ -46,6 +46,7 @@ router.post("/add", async (req, res, next) => {
     phoneNumber: req.body.phoneNumber,
     password: hashedPassword,
     dob: req.body.dob,
+    address: req.body.address,
   });
 
   try {
@@ -72,6 +73,8 @@ router.put("/update/:customerId", async (req, res, next) => {
       email: req.body.email,
       phoneNumber: req.body.phoneNumber,
       dob: req.body.dob,
+      address: req.body.address,
+
     };
 
     const updatedCustomer = await customerModel.findByIdAndUpdate({_id : req.params.customerId}, customer);
@@ -107,6 +110,23 @@ router.delete("/delete/:customerId", async (req, res, next) => {
         message : error
     })
 }
+});
+
+// view customer
+router.get("/view/:customerId", async (req, res, next) => {
+  try{
+    const viewCustomer = await customerModel.findById(req.params.customerId);
+    res.status(200).json({
+          status : 0,
+          message : "Data Viewed Successfully",
+          results : viewCustomer
+      });
+  } catch(error){
+    res.status(400).json({
+      status : 1,
+      message : error
+  });
+  }
 });
 
 /* search customer */

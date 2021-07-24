@@ -1,0 +1,21 @@
+<div class="card text-center">
+    <div class="card-header">
+      Customer Information
+    </div>
+    <div class="card-body">
+      <table align="center">
+        <tr><td>Customer ID</td><td>:</td><td>{{customerData._id}}</td></tr>
+        <tr><td>First Name</td><td>:</td><td>{{customerData.firstName}}</td></tr>
+        <tr><td>Last Name</td><td>:</td><td>{{customerData.lastName}}</td></tr>
+        <tr><td>Email</td><td>:</td><td>{{customerData.email}}</td></tr>
+        <tr><td>Phone Number</td><td>:</td><td>{{customerData.phoneNumber}}</td></tr>
+        <tr><td>Address</td><td>:</td><td>{{customerData.address}}</td></tr>
+        <tr><td>Date Of Birth</td><td>:</td><td>{{customerData.dob}}</td></tr>
+      </table>
+    </div>
+    <div class="card-footer text-muted">
+      <a [routerLink]="['delete',customerData._id]" class="btn btn-danger">Delete</a>
+      <a [routerLink]="['edit',customerData._id]" class="btn btn-primary">Edit</a>
+
+    </div>
+  </div>

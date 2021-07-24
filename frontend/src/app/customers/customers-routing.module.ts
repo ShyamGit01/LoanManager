@@ -6,12 +6,14 @@ import { DeleteCustomerComponent } from './delete-customer/delete-customer.compo
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { ListCustomersComponent } from './list-customers/list-customers.component';
 import { SearchCustomerComponent } from './search-customer/search-customer.component';
+import { ViewCustomersComponent } from './view-customers/view-customers.component';
 
 const routes: Routes = [
   { path: '', component: ListCustomersComponent },
   { path: 'add', component: AddCustomerComponent },
   { path: 'edit/:id', component: EditCustomerComponent },
   { path: 'delete/:id', component: DeleteCustomerComponent },
+  { path: 'view/:id', component: ViewCustomersComponent },
   { path: 'search', component: SearchCustomerComponent },
 
 ];

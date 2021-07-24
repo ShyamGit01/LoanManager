@@ -8,6 +8,7 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { DeleteCustomerComponent } from './delete-customer/delete-customer.component';
 import { SearchCustomerComponent } from './search-customer/search-customer.component';
+import { ViewCustomersComponent } from './view-customers/view-customers.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SearchCustomerComponent } from './search-customer/search-customer.compo
     AddCustomerComponent,
     EditCustomerComponent,
     DeleteCustomerComponent,
-    SearchCustomerComponent
+    SearchCustomerComponent,
+    ViewCustomersComponent
   ],
   imports: [
     CommonModule,
