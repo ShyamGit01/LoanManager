@@ -1,1 +1,234 @@
-<p>add-customer works!</p>
+<div class="card text-center">
+  <div class="card-header">Add New Customer</div>
+  <div class="card-body">
+    <!-- <form [formGroup]="AddCustomerForm" (ngSubmit)="AddCustomer()"> -->
+    <form [formGroup]="AddCustomerForm" (ngSubmit)="AddCustomer()">
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Basic Details
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <div class="input-group-text">First Name</div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="John"
+                    aria-label="First name"
+                    formControlName="firstName"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <div class="input-group-text">Last Name</div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Smith"
+                    aria-label="Last name"
+                    formControlName="lastName"
+                    required
+                  />
+                </div>
+              </div>
+              <div><br /></div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <div class="input-group-text">Email ID</div>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="John@mail.com"
+                    formControlName="email"
+                    id="inputEmail4"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <div class="input-group-text">Phone Number</div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="+919123456780"
+                    id=""
+                    formControlName="phoneNumber"
+                    required
+                  />
+                </div>
+              </div>
+              <div><br /></div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <div class="input-group-text">Date Of Birth</div>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id=""
+                    formControlName="dob"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group">
+                  <div class="input-group-text">Password</div>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputPassword4"
+                    formControlName="password"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Residence Address
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body row">
+              <div class="col-12">
+                <div class="input-group">
+                  <div class="input-group-text">Address</div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="1234 Main St"
+                    formControlName="R_address"
+                  />
+                </div>
+              </div>
+              <div><br /></div>
+
+              <div class="col-md-4">
+                <div class="input-group">
+                  <div class="input-group-text">City</div>
+                    
+                    <input type="text" class="form-control" id="inputCity" formControlName="R_city" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <div class="input-group-text">State</div>
+                  <input type="text" class="form-control" id="inputState" formControlName="R_state"/>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="input-group">
+                  <div class="input-group-text">Pincode</div>
+                  <input type="text" class="form-control" id="inputZip" formControlName="R_pin"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Permanent Address
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body row">
+              <div class="col-12">
+                <div class="input-group">
+                  <div class="input-group-text">Address</div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Apartment, studio, or floor"
+                    formControlName="P_address"
+                  />
+                </div>
+              </div>
+              <div><br /></div>
+
+              <div class="col-md-4">
+                <div class="input-group">
+                  <div class="input-group-text">City</div>
+                  <input type="text" class="form-control" id="inputCity" formControlName="P_city" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <div class="input-group-text">State</div>
+                  <input type="text" class="form-control" id="inputState" formControlName="P_state" />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <div class="input-group-text">Pincode</div>
+                  <input type="text" class="form-control" id="inputZip" formControlName="P_pin"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div><br /></div>
+
+      <div class="col-12">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!AddCustomerForm.valid"
+        >
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

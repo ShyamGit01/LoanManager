@@ -14,8 +14,9 @@ export class CustomerService {
     return this.httpClient.get(url);
   }
 
-  addCustomer(){
-
+  addCustomer(customer: any){
+    var url = environment.BASE_URL+environment.CUSTOMER_BASE_URL.ADD_CUSTOMER;
+    return this.httpClient.post(url, customer);
   }
 
   viewCustomer(id: any){
