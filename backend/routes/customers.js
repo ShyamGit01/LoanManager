@@ -80,7 +80,14 @@ router.put("/update/:customerId", async (req, res, next) => {
       email: req.body.email,
       phoneNumber: req.body.phoneNumber,
       dob: req.body.dob,
-      address: req.body.address,
+      R_address: req.body.R_address,
+    R_city: req.body.R_city,
+    R_state: req.body.R_state,
+    R_pin: req.body.R_pin,
+    P_address: req.body.P_address,
+    P_city: req.body.P_city,
+    P_state: req.body.P_state,
+    P_pin: req.body.P_pin,
     };
 
     const updatedCustomer = await customerModel.findByIdAndUpdate(

@@ -1,7 +1,8 @@
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
 
-<h2>Customers</h2>
+<h3>Customers List</h3>
 <button class="btn btn-primary" [routerLink]="'add'">Add New Customers</button>
+<div class="container">
+  
 <div class="well">
     <table class="table">
       <thead>
@@ -13,7 +14,6 @@
           <th>Phone Number</th>
           <th>Email</th>
           <th>Residence Address</th>
-          <th style="width: 36px;"></th>
         </tr>
       </thead>
       <tbody>
@@ -25,22 +25,10 @@
           <td>{{ customer.phoneNumber }}</td>
           <td>{{ customer.email }}</td>
           <td>{{ customer.R_address }},{{ customer.R_city }},{{ customer.R_state }},{{ customer.R_pin }}</td>
-          <td>
-            <a [routerLink]="['edit',customer._id]"><i class="icon-pencil"></i></a>
-            <a [routerLink]="['delete',customer._id]" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-        </td>
+         
         </tr>
 
       </tbody>
     </table>
 </div>
-<div class="pagination">
-    <ul>
-        <li><a href="#">Prev</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
 </div>

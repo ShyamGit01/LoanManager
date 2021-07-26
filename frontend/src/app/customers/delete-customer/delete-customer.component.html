@@ -1,1 +1,21 @@
-<p>delete-customer works!</p>
+<div class="card text-center border-danger">
+    <div class="card-header border-danger">
+      Delete Customer Information
+    </div>
+    <div class="card-body">
+      <table align="center">
+        <tr><td><h6>Customer ID</h6></td><td>:</td><td>{{customerData._id}}</td></tr>
+        <tr><td><h6>First Name</h6></td><td>:</td><td>{{customerData.firstName}}</td></tr>
+        <tr><td><h6>Last Name</h6></td><td>:</td><td>{{customerData.lastName}}</td></tr>
+        <tr><td><h6>Email</h6></td><td>:</td><td>{{customerData.email}}</td></tr>
+        <tr><td><h6>Phone Number</h6></td><td>:</td><td>{{customerData.phoneNumber}}</td></tr>
+        <tr><td><h6>Residence Address</h6></td><td>:</td><td>{{ customerData.R_address }}, {{ customerData.R_city }}, {{ customerData.R_state }}, {{ customerData.R_pin }}</td></tr>
+        <tr><td><h6>Present Address</h6></td><td>:</td><td>{{ customerData.P_address }}, {{ customerData.P_city }}, {{ customerData.P_state }}, {{ customerData.P_pin }}</td></tr>
+        <tr><td><h6>Date Of Birth</h6></td><td>:</td><td>{{customerData.dob}}</td></tr>
+      </table>
+    </div>
+    <div class="card-footer text-muted border-danger">
+      <a (click)="removeCustomer()" class="btn btn-danger">Confirm Delete</a>
+
+    </div>
+  </div>
